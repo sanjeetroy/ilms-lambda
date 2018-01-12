@@ -113,7 +113,7 @@ public void logSummaryOps(){
 		activeUsers_caseInSensitive.addAll(activeUsers);
 		
 		lmsActiveUsersEmail_caseInSensitive.removeAll(activeUsers_caseInSensitive);
-		log.info("CSV Emails = " + Arrays.toString(activeUsers_caseInSensitive.toArray()));
+//		log.info("CSV Emails = " + Arrays.toString(activeUsers_caseInSensitive.toArray()));
 		log.info("Emails of the Users that will be InActivated = " + Arrays.toString(lmsActiveUsersEmail_caseInSensitive.toArray()));
 		
 		for(String email:lmsActiveUsersEmail_caseInSensitive){
@@ -296,10 +296,10 @@ public void logSummaryOps(){
 		profileFields.put("supervisorName",adUser.getSupervisorName());
 		profileFields.put("supervisorEmail",adUser.getSupervisorEmail());
 		profileFields.put("city",adUser.getCity());
-		profileFields.put("country",adUser.getCountry());
+//		profileFields.put("country",adUser.getCountry());
 		profileFields.put("address1",adUser.getAddress1());
-		profileFields.put("address2",adUser.getAddress2());
-		profileFields.put("company",adUser.getSubsidiaryCompany());
+//		profileFields.put("address2",adUser.getAddress2());
+//		profileFields.put("company",adUser.getSubsidiaryCompany());
 		
 		if(onlyCompare == 0){
 			if(regionExist(adUser.getCity())){

@@ -13,29 +13,38 @@ public class AdUser {
 	private String lastName;
     @Parsed(field = "Full Name",defaultNullRead="")
     private String FullName;
-	@Parsed(field = "Company email",defaultNullRead="")
+//	@Parsed(field = "Company email",defaultNullRead="")
+	@Parsed(field = "Email - Work",defaultNullRead="")
 	private String emailId;
-	@Parsed(field = "Start Date") //
+//	@Parsed(field = "Start Date") //
+	@Parsed(field = "Hire Date") //
 	private String hireDate;
-	@Parsed(field = "Employee Type",defaultNullRead="") //
+//	@Parsed(field = "Employee Type",defaultNullRead="") //
+	@Parsed(field = "Employee Sub-Type",defaultNullRead="") //
 	private String employeeType;
-	@Parsed(field = "Departments",defaultNullRead="AppDirect Default Department")
+//	@Parsed(field = "Departments",defaultNullRead="AppDirect Default Department")
+	@Parsed(field = "Cost Center",defaultNullRead="AppDirect Default Department")
 	private String department;
-	@Parsed(field = "Job Title",defaultNullRead="")
+//	@Parsed(field = "Job Title",defaultNullRead="")
+	@Parsed(field = "Business Title",defaultNullRead="")
 	private String jobTitle;
 	@Parsed(field = "Division",defaultNullRead="AppDirect Default Division")
 	private String division;
-	@Parsed(field = "Reports To Full Name",defaultNullRead="")
+//	@Parsed(field = "Reports To Full Name",defaultNullRead="")
+	@Parsed(field = "Employee's Manager",defaultNullRead="")
 	private String supervisorName;
-	@Parsed(field = "Reports To Email",defaultNullRead="")
+//	@Parsed(field = "Reports To Email",defaultNullRead="")
+	@Parsed(field = "Manager's Email",defaultNullRead="")
 	private String supervisorEmail;
-	@Parsed(field = "Office City",defaultNullRead="")
+//	@Parsed(field = "Office City",defaultNullRead="")
+	@Parsed(field = "Location",defaultNullRead="")
 	private String city;
 	@Parsed(field = "Office Country",defaultNullRead="")
 	private String country;
-	@Parsed(field = "Office Location Address 1",defaultNullRead="")
+//	@Parsed(field = "Office Location Address 1",defaultNullRead="")
+	@Parsed(field = "Addresses",defaultNullRead="")
 	private String address1;
-	@Parsed(field = "Office Location Address 2",defaultNullRead="")
+	/*@Parsed(field = "Office Location Address 2",defaultNullRead="")
 	private String address2;
 	@Parsed(field = "Office Location Zip",defaultNullRead="")
 	private String zipCode;
@@ -43,7 +52,7 @@ public class AdUser {
 	private String userStatus;
 	@Parsed(field = "Subsidiary Company",defaultNullRead="") 
 	private String subsidiaryCompany;
-	
+	*/
 	public DiffUser equals(LmsUser lmsUser){
 		Map<String,String> list =  new HashMap<String,String>();
 		Map<String,String> listOld =  new HashMap<String,String>();
@@ -150,7 +159,7 @@ public class AdUser {
 		return diffUser;
 	}
 	
-	public String getZipCode() {
+	/*public String getZipCode() {
 		if(zipCode != null){
 			return zipCode.trim();
 		}
@@ -159,7 +168,7 @@ public class AdUser {
 
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
-	}
+	}*/
 
 	public String getFirstName() {
 		if(firstName != null){
@@ -278,7 +287,7 @@ public class AdUser {
 	public void setAddress1(String address1) {
 		this.address1 = address1;
 	}
-	public String getAddress2() {
+	/*public String getAddress2() {
 		if(address2 != null){
 			return address2.trim().replaceAll(" +", " ");
 		}
@@ -305,6 +314,6 @@ public class AdUser {
 	public void setSubsidiaryCompany(String subsidiaryCompany) {
 		this.subsidiaryCompany = subsidiaryCompany;
 	}
-
+*/
 
 }

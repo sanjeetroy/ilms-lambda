@@ -234,7 +234,7 @@ public class LmsApiCallerServiceImpl implements LmsApiCallerService{
 		for(NewUser newUser: newUsers){
 			response = addUser(newUser);
 			if(response == 201){
-				count += response;
+				count += 1;
 			}else{
 				fail += 1;
 				failEmail.add(newUser.getEmailId());
